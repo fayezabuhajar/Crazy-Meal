@@ -1,0 +1,340 @@
+body {
+  margin: 0;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between; /* يوزع العناصر: اللوجو يسار واللينكات يمين */
+    align-items: center;
+    background-color: #04AA6D;
+    padding: 20px;
+    
+}
+
+.topnav .logo a {
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.topnav .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1em;
+    padding: 20px;
+}
+
+.topnav .nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+h3 {
+    text-align: center;
+    color: #04AA6D;
+}
+
+
+/* تقسيم الشاشة */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left, .right {
+    flex: 1;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* تنسيق الفورم */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, button {
+    margin-top: 5px;
+    padding: 8px;
+}
+
+button {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #04AA6D;
+}
+
+/* الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* الفوتر */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;  /* A shade of green */
+    color: #fff;
+    text-align: center;
+    padding: 0px ;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+footer p {
+    background-color: #04AA6D;
+    padding: 1%;
+    width: 20%;
+    text-align: center;
+    margin: 0 auto;
+
+      
+}
+
+:root {
+    --primary-color: #04AA6D;
+    --secondary-color: #f0f0f0;
+    --text-color: #333;
+    --dark-text-color: #2e8b57;
+    --card-background: #fff;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    background-image: url('../images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+.topnav {
+    background-color: var(--dark-text-color);
+    overflow: hidden;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Main Content Layout */
+.container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Cards (Form & Table) */
+.card {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex-basis: 100%;
+    max-width: 500px;
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 1;
+    }
+}
+
+.card-title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 1px;
+    font-weight: 600;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 1px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #038d5b;
+}
+
+#clearOrdersBtn {
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 200px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block; /* لجعل العنصر يأخذ سطرًا كاملاً */
+    width: 100%; /* لإعطائه عرضًا ليتمكن من التوسيط */
+    margin: 10px auto;
+    
+}
+
+#clearOrdersBtn:hover {
+    background-color: #c82333;
+}
+
+/* Table Styling */
+#ordersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#ordersTable th, #ordersTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#ordersTable th {
+    background-color: #f2f2f2;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+#ordersTable img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.menu-category {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.menu-category h2 {
+    color: #555;
+    margin-bottom: 15px;
+    border-left: 5px solid #04AA6D;
+    padding-left: 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between; /* يضع اسم الوجبة على اليسار والسعر على اليمين */
+    align-items: center;            /* يجعل الاسم والسعر بمحاذاة واحدة عموديًا */
+    margin-bottom: 5px;
+    padding: 15px 20px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s; /* لإضافة تأثير عند المرور بالفأرة */
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.menu-item h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.menu-item .price {
+    color: #04AA6D;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.menu-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+
+
